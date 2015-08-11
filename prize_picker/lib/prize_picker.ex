@@ -1,14 +1,12 @@
 defmodule PrizePicker do
 
-  @doc """
+  @moduledoc """
   Picks the winners for our giveaway.
 
   ## Examples
 
   iex> PrizePicker.get_numbers(n, count)
     [1, 2, 9]
-
-  ## ?\f converts to Integer
   """
   def get_numbers(n, count)  do
     :random.seed(:os.timestamp)
