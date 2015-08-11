@@ -25,4 +25,9 @@ defmodule EnumsStreams do
   def enums do
     1..100_000 |> Enum.map(&(&1 * 3))
   end
+
+  def file_stream do
+    stream = File.stream!("./lib/enums_streams.ex")
+    Enum.take(stream, 10)
+  end
 end
